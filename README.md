@@ -4,7 +4,6 @@ A real-time audio visualizer for Waybar using Cava + Playerctl, styled in Tokyo 
 
 ## Features
  - Smooth gradient bars
- - Debounced updates (no flicker on song change)
  - Fixed bar width
  - Works with Spotify and other MPRIS players
 
@@ -13,18 +12,20 @@ A real-time audio visualizer for Waybar using Cava + Playerctl, styled in Tokyo 
  - playerctl 
  - jq
 ## Installation
-Place waybar-audio-visualizer.sh in ~/.config/waybar/scripts/
+Place waybar-audio-visualizer.sh in ```~/.config/waybar/scripts/```
 
 Make it executable:
-chmod +x ~/.config/waybar/scripts/waybar-audio-visualizer.sh
+```chmod +x ~/.config/waybar/scripts/waybar-audio-visualizer.sh```
 
 add this to your waybar config:
+```
 "custom/music": {
-  "exec": "~/.config/waybar/scripts/waybar-visualizer.sh -b 12 -f 60 -d 600",
+  "exec": "~/.config/waybar/scripts/waybar-audio-visualizer.sh -b 12 -f 60 -d 600",
   "return-type": "json",
   "tail": true,
   "format": "{text}",
   "tooltip": true,
   "markup": true
 }
+```
 
